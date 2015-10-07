@@ -14,7 +14,7 @@ trap failsafe EXIT TERM INT
 
 rm -f /root/dump.pcap
 
-tcpdump -q -s0 -i br0 -n -w /root/dump.pcap -C 20 &
+tcpdump -nnvvXSs 0 -i br0 -w /root/dump.pcap -C 20 &
 
 sleep 5
 
